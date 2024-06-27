@@ -1,4 +1,5 @@
 {
+  "homepage": "https://nyk97.github.io/nyk97.github.io",
   "name": "nyk97.github.io",
   "version": "0.1.0",
   "private": true,
@@ -39,6 +40,5 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  },
-  "homepage": "https://nyk97.github.io/"
+  }
 }
