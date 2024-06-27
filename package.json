@@ -1,8 +1,8 @@
 {
-  "homepage": "https://nyk97.github.io/nyk97.github.io",
+  "homepage": "https://nyk97.github.io/",
   "name": "nyk97.github.io",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
