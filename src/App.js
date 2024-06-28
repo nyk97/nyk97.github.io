@@ -1,23 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "./Layout";
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleLoaded = () => {
+    setIsLoaded(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.asdasd
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!isLoaded && <LoadingScreen onLoaded={handleLoaded} />}
+      {isLoaded && <Layout />}
     </div>
   );
 }

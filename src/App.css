@@ -1,6 +1,14 @@
 .App {
   text-align: center;
 }
+body, .App {
+  cursor: url('./assets/cursor.png'), auto;
+}
+
+.projects-section {
+  cursor: url('./assets/cursor.png'), auto;
+}
+
 
 .App-logo {
   height: 40vmin;

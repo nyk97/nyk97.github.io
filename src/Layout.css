@@ -1,0 +1,47 @@
+.sidebar {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+  padding-top: 20px;
+  font-family: 'Space Mono', monospace;
+  border-right: #fff;
+  border-style: dashed;
+  border-left: #000;
+  border-top: #000;
+  border-bottom: #000;
+}
+
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: white;
+}
+
+.nav-link .icon {
+  margin-right: 8px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  background-color: #495057;
+  color:#00ffff;
+  border-radius: 0.25rem;
+  text-decoration: underline;
+}
+.nav-link:hover{
+  font-weight: bold;
+  color: #00ffff;
+  border-radius: 0.25rem;
+}
