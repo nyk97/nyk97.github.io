@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.764cc12f.css",
-    "main.js": "/static/js/main.01e24574.js",
+    "main.css": "/static/css/main.e0167444.css",
+    "main.js": "/static/js/main.0f2c561d.js",
     "static/js/453.6ed7b832.chunk.js": "/static/js/453.6ed7b832.chunk.js",
-    "static/media/logo.webp": "/static/media/logo.af2d2cf98ca5db49a85c.webp",
-    "static/media/projectsBackground.jpg": "/static/media/projectsBackground.e7d51784f0ccf8e4bcec.jpg",
+    "static/media/projectsBackground.jpg": "/static/media/projectsBackground.86ab12b4913a9e8d12b2.jpg",
     "static/media/getInspired.webp": "/static/media/getInspired.df8b01d23e7f391e978c.webp",
     "static/media/superPako.webp": "/static/media/superPako.cf5846f86caf0d97f55a.webp",
     "static/media/stumpyTrump.jpg": "/static/media/stumpyTrump.774ac96a5f8678b918e3.jpg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.764cc12f.css.map": "/static/css/main.764cc12f.css.map",
-    "main.01e24574.js.map": "/static/js/main.01e24574.js.map",
+    "main.e0167444.css.map": "/static/css/main.e0167444.css.map",
+    "main.0f2c561d.js.map": "/static/js/main.0f2c561d.js.map",
     "453.6ed7b832.chunk.js.map": "/static/js/453.6ed7b832.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.764cc12f.css",
-    "static/js/main.01e24574.js"
+    "static/css/main.e0167444.css",
+    "static/js/main.0f2c561d.js"
   ]
 }
