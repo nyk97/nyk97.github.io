@@ -10,7 +10,7 @@
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .futuristic-card {
@@ -40,6 +40,7 @@
   .home-content p,
   .home-content ul {
     margin: 0.5rem 0;
+    font-size: 0.9rem;
   }
 
   .home-content ul {
@@ -49,7 +50,7 @@
   }
 
   .home-content strong {
-    color: #00d8ff;
+    color: #0ff;
   }
 
   .display-4 {
@@ -58,7 +59,7 @@
   }
 
   .button-primary {
-    background-color: #00d8ff;
+    background-color: #0ff;
     border: none;
     color: #ffffff;
     padding: 10px 20px;
@@ -112,7 +113,7 @@
   }
 
   .timeline-entry a {
-    color: #00d8ff;
+    color: #0ff;
     text-decoration: none;
   }
 
@@ -145,7 +146,7 @@
   }
 
   .slick-active .custom-dot {
-    background-color: #00d8ff;
+    background-color: #0ff;
   }
 
   .slick-slider {
@@ -173,19 +174,22 @@
   @media (max-width: 992px) {
     .container-fluid {
       min-height: 100vh;
-      overflow-y: auto;
+      overflow-y: scroll;
     }
 
     .home-section {
       height: 100%; 
       padding: 20px 0;
+
     }
 
     .futuristic-card {
       margin-bottom: 20px;
+
     }
 
     .timeline-entry {
       max-width: 100%;
+
     }
   }

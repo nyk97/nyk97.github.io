@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   object-fit: contain;
+
 }
 
 .loading-circle::before,

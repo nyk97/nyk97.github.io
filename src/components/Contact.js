@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaEnvelope,
+  FaLinkedin,
+} from "react-icons/fa";
 import "./Contact.css";
 
 const Contact = () => {
@@ -9,21 +14,28 @@ const Contact = () => {
       <Container>
         <Row className="justify-content-center m-0">
           <Col md={8}>
-            <h2 className="text-center mb-4">Contact Me</h2>
+            <h2 className="text-center mb-4">Contact me</h2>
             <div className="social-icons text-center mt-4">
               <a
-                href="https://www.facebook.com/yourprofile"
+                href="https://www.facebook.com/nikola.stojkoski.7/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFacebook className="icon facebook-icon" />
               </a>
               <a
-                href="https://www.instagram.com/yourprofile"
+                href="https://www.instagram.com/nstojkoski/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram className="icon instagram-icon" />
+              </a>
+              <a
+                href="mailto:nstojkoski97@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaEnvelope className="icon email-icon" />
               </a>
               <a
                 href="https://www.linkedin.com/in/yourprofile"

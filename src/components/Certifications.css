@@ -15,9 +15,16 @@
 .card-text{
   font-size: 1rem;
 }
-
-.card-text a:hover {
+.card-link-frame{
+  text-align: center;
+}
+.card-link {
   color: #0ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-link:hover {
+font-weight: bold;  text-decoration: underline;
 }
 
 .list-group-item {

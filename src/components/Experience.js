@@ -4,26 +4,35 @@ import projectsData from "../dummy/projectsData";
 import "./Experience.css";
 
 const Experience = () => {
-  const [filter, setFilter] = useState("web");
+  const [filter, setFilter] = useState("all");
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
 
-  const filteredProjects = projectsData[filter];
+  const filteredProjects =
+    filter === "all"
+      ? [...projectsData.web, ...projectsData.mobile]
+      : projectsData[filter];
 
   return (
     <section className="projects-section">
       <RocketScene />
       <div className="filter-buttons">
         <button
-          className="filter-button"
+          className={`filter-button ${filter === "all" ? "active" : ""}`}
+          onClick={() => handleFilterChange("all")}
+        >
+          All
+        </button>
+        <button
+          className={`filter-button ${filter === "web" ? "active" : ""}`}
           onClick={() => handleFilterChange("web")}
         >
           Web
         </button>
         <button
-          className="filter-button"
+          className={`filter-button ${filter === "mobile" ? "active" : ""}`}
           onClick={() => handleFilterChange("mobile")}
         >
           Mobile
@@ -73,7 +82,7 @@ const Experience = () => {
                   rel="noopener noreferrer"
                   className="pb-2"
                 >
-                  {project.link}
+                  LINK HERE
                 </a>
               )}
             </div>

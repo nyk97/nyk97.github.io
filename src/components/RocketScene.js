@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import "./RocketScene.css";
 
 const RocketScene = () => {
@@ -27,13 +26,6 @@ const RocketScene = () => {
       }
 
       window.addEventListener("resize", handleWindowResize, false);
-
-      const loader = new GLTFLoader();
-      loader.load("https://stivs.dev/assets/rocket/rocket.gltf", (gltf) => {
-        rocket = gltf.scene;
-        rocket.position.y = 50;
-        scene.add(rocket);
-      });
     };
 
     const handleWindowResize = () => {

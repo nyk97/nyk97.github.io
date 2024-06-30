@@ -10,17 +10,17 @@
 
 .contact-section h2 {
   font-size: 2.5rem;
-  color: #00d8ff;
+  color: #0ff;
   margin-bottom: 1rem;
 }
 
 .contact-section .form-label {
-  color: #00d8ff;
+  color: #0ff;
 }
 
 .contact-section .form-control {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #00d8ff;
+  border: 1px solid #0ff;
   color: #ffffff;
   border-radius: 5px;
   padding: 10px;
@@ -32,12 +32,12 @@
 
 .contact-section .form-control:focus {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #00d8ff;
+  border-color: #0ff;
   box-shadow: 0 0 10px rgba(0, 216, 255, 0.6);
 }
 
 .futuristic-button {
-  background: linear-gradient(135deg, #00d8ff 0%, #007a99 100%);
+  background: linear-gradient(135deg, #0ff 0%, #007a99 100%);
   border: none;
   color: #ffffff;
   padding: 10px 20px;
@@ -49,7 +49,7 @@
 }
 
 .futuristic-button:hover {
-  background: linear-gradient(135deg, #007a99 0%, #00d8ff 100%);
+  background: linear-gradient(135deg, #007a99 0%, #0ff 100%);
   box-shadow: 0 0 20px rgba(0, 216, 255, 0.6);
   color: #ffffff;
 }
@@ -76,11 +76,11 @@
   color: #e4405f;
 }
 
-.linkedin-icon {
-  color: #0077b5;
+.email-icon {
+  color: #d44638;
 }
 
 .icon:hover {
   transform: scale(1.2);
-  color: #00d8ff;
+  color: #0ff;
 }

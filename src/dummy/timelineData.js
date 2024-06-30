@@ -1,14 +1,5 @@
 export const timelineData = [
   {
-    year: "2013",
-    projects: [
-      {
-        title: "Started Career",
-        description: "Began working with Blitz3D for game development.",
-      },
-    ],
-  },
-  {
     year: "2016",
     projects: [
       {
@@ -17,7 +8,7 @@ export const timelineData = [
         description:
           "Designed and programmed an Android game called Stumpy Trump.",
         technology: "Unity",
-        link: "https://play.google.com/store/apps/details?id=com.example.stumpytrump",
+        link: "https://apkpure.net/stumpy-trump/com.crystalvision.StumpyTrump",
       },
     ],
   },
@@ -25,9 +16,9 @@ export const timelineData = [
     year: "2017",
     projects: [
       {
-        title: "IT Novum 2017",
+        title: "IT Novum Challenge - Organized by M3DS Academy and Autodesk",
         award:
-          "1st place in IT Novum 2017 organized by M3DS Academy and Sony Pictures Animations.",
+          "1st place in IT Novum 2017 organized by M3DS Academy and Autodesk 3D.",
       },
     ],
   },
@@ -40,7 +31,7 @@ export const timelineData = [
         description:
           "Developed an educational game, SuperPako, as a solution for peer violence.",
         technology: "Unity",
-        link: "https://example.com/superpako.apk",
+        link: "https://apkpure.com/%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BF%D0%B0%D0%BA%D0%BE/com.intc.heado.bullying",
         award:
           "1st place in a competition organized by SmartUp - Social Innovation Lab and UNICEF on November 18, 2018.",
       },
@@ -58,7 +49,7 @@ export const timelineData = [
     year: "2020",
     projects: [
       {
-        title: 'Институт за фолклор "Марко Цепенков" - Скопје',
+        title: "Marko Cepenkov Institute of Folklore - Skopje",
         role: "UI/UX Designer, Creator, and Manager",
         description:
           "Designed, created, and managed an institutional governmental website.",
@@ -108,7 +99,7 @@ export const timelineData = [
         description:
           "Developed an Android app that provides daily motivational quotes.",
         technology: "Android Development",
-        link: "https://apkpure.com/get-inspired-motivational-quotes/com.example.getinspired",
+        link: "https://apkpure.com/get-inspired-motivation-quot/com.intc.myapplication/amp",
       },
     ],
   },
@@ -121,7 +112,7 @@ export const timelineData = [
         description:
           "Built the admin panel's front-end for the TAV airport in Skopje.",
         technology: "React",
-        link: "https://example.com/tav-admin-panel",
+        link: "http://devtavadmin.mk-host.mk/",
       },
       {
         title: "Invoice Management App",

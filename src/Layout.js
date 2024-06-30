@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaEnvelope,
   FaHome,
@@ -12,10 +12,41 @@ import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import LoadingAnimation from "./components/LoadingAnimation";
-import "./Layout.css"; // Ensure this file contains the necessary CSS
+import "./Layout.css";
 
 const Layout = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
+  // eslint-disable-next-line no-unused-vars
+  const [loadingComplete, setLoadingComplete] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingComplete(true);
+    }, 4000);
+
+    const authStatus = sessionStorage.getItem("isAuthenticated");
+    if (authStatus === "true") {
+      setIsAuthenticated(true);
+    }
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password === "portfolio") {
+      setIsAuthenticated(true);
+      sessionStorage.setItem("isAuthenticated", "true");
+    } else {
+      alert("Incorrect password!");
+    }
+  };
 
   const renderContent = () => {
     switch (activeSection) {
@@ -34,11 +65,33 @@ const Layout = () => {
     }
   };
 
+  if (!isAuthenticated) {
+    return (
+      <div className="password-protect">
+        <div className="logo">
+          <LoadingAnimation />
+        </div>
+        <form className="password-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="password">Enter Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    );
+  }
+
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-3 sidebar">
-          <div className="profile text-center">
+          <div className="profile">
             <LoadingAnimation />
           </div>
           <div className="nav flex-column text-center">

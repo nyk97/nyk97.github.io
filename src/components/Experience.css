@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 .projects-section {
-  padding: 2rem;
   color: #fff;
   font-family: 'Space Mono', monospace;
   display: flex;
@@ -11,6 +10,8 @@
 
 .filter-buttons {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .filter-button {
@@ -25,11 +26,16 @@
   background-color: #0ff;
 }
 
-.filter-button:hover,
+.filter-button:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: #005f5f;
+}
+
 .filter-button.active {
   font-weight: bold;
   color: #fff;
-  background-color: #0ff;
+  background-color: #005f5f;
 }
 
 .project-category {
@@ -57,8 +63,10 @@
 
 .project-image {
   width: 100%;
-  height: auto;
+  max-height: 50%;
   border-radius: 10px;
+  object-fit: cover;
+  object-position: top;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -81,7 +89,7 @@
 
 .project-company {
   font-size: 0.9rem;
-  color: #00d8ff;
+  color: #0ff;
   margin-bottom: 0.5rem;
 }
 

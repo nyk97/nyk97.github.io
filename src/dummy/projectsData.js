@@ -9,7 +9,7 @@ const projectsData = {
       description:
         "An Android game designed and built for the Google Play Store.",
       technologies: "Unity",
-      link: "link-to-google-play-store",
+      link: "https://apkpure.net/stumpy-trump/com.crystalvision.StumpyTrump",
       image: stumpyTrumpImage,
     },
     {
@@ -17,7 +17,7 @@ const projectsData = {
       description:
         "An educational game developed as a solution for peer violence, consisting of interactive stories that could happen in real life.",
       technologies: "Unity",
-      link: "link-to-apk",
+      link: "https://apkpure.com/%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BF%D0%B0%D0%BA%D0%BE/com.intc.heado.bullying",
       awards:
         "1st place in a competition organized by SmartUp - Social Innovation Lab and UNICEF (November 18, 2018)",
       image: superPakoImage,
@@ -27,13 +27,13 @@ const projectsData = {
       description:
         "An Android app that provides motivational quotes to inspire users. The app is designed to deliver daily quotes to keep users motivated and positive.",
       technologies: "Android Development",
-      link: "link-to-apkpure",
+      link: "https://apkpure.com/get-inspired-motivation-quot/com.intc.myapplication/amp",
       image: getInspiredImage,
     },
   ],
   web: [
     {
-      title: 'Институт за фолклор "Марко Цепенков" - Скопје (2020 - Present)',
+      title: "Marko Cepenkov Institute of Folklore - Skopje (2020 - Present)",
       role: "UI/UX Designer, Creator, and Manager",
       description:
         "An institutional governmental website. Managed cPanel, VPS, and emails.",
@@ -49,7 +49,7 @@ const projectsData = {
       link: "http://agroglobal.mk",
     },
     {
-      title: "TAV Skopje International Airport(2023)",
+      title: "TAV Skopje International Airport (2023)",
       role: "Front-End Developer",
       description:
         "Built the  Admin Panel's front-end for the TAV airport in Skopje.",
@@ -65,7 +65,8 @@ const projectsData = {
       link: "http://neatdollar.com",
     },
     {
-      title: "Alobushavko - First Children's Embaassy in the World - Megjashi",
+      title:
+        "Alobushavko - First Children's Embaassy in the World - Megjashi (2022 - Present)",
       role: "UI/UX Designer, Developer",
       description: "Recreated, fixed bugs, and resolved hosting problems.",
       technologies: "Joomla, Figma",

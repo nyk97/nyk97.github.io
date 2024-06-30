@@ -41,8 +41,8 @@ const Home = () => {
   };
 
   return (
-    <section className="home-section">
-      <Container fluid className="overflow-auto">
+    <section className="home-section overflow-hidden">
+      <Container fluid className="">
         <Row className="justify-content-center">
           <Col lg={12}>
             <Card className="futuristic-card animated-card">
@@ -54,7 +54,7 @@ const Home = () => {
                       "Hello! I'm Nikola Stojkoski",
                       "Fullstack Software Developer",
                     ]}
-                    typeSpeed={40}
+                    typeSpeed={80}
                     backSpeed={50}
                     loop
                   />
@@ -84,7 +84,7 @@ const Home = () => {
           </Col>
         </Row>
         <Row className="justify-content-center" id="timeline">
-          <Col lg={12}>
+          <Col lg={12} className="h-100">
             <h2 className="text-center display-5 fs-4 pt-2">Career Timeline</h2>
             <div className="timeline">
               <motion.div
@@ -122,13 +122,12 @@ const Home = () => {
                           )}
                           {project.link && (
                             <p>
-                              <strong>Link:</strong>{" "}
                               <a
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                {project.link}
+                                <strong>LINK HERE</strong>
                               </a>
                             </p>
                           )}

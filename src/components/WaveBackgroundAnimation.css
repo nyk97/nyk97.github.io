@@ -2,7 +2,8 @@
   width: 100%;
   height: 100vh;
   position: absolute;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  z-index: -1;
 }
 
 .section_wave {
@@ -38,3 +39,9 @@
 .dash_2 { animation-delay: 4s; }
 .dash_3 { animation-delay: 6s; }
 .dash_4 { animation-delay: 8s; }
+
+@media (max-width: 992px) {
+  .main{
+    top: 0;
+  }
+}
