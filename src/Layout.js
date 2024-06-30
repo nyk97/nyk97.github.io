@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
 import {
   FaEnvelope,
-  FaLanguage,
+  FaHome,
+  FaTools,
   FaBriefcase,
   FaCertificate,
 } from "react-icons/fa";
@@ -12,7 +12,7 @@ import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import LoadingAnimation from "./components/LoadingAnimation";
-import "./Layout.css";
+import "./Layout.css"; // Ensure this file contains the necessary CSS
 
 const Layout = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -35,30 +35,30 @@ const Layout = () => {
   };
 
   return (
-    <Container fluid>
-      <Row>
-        <Col md={3} className="sidebar">
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-3 sidebar">
           <div className="profile text-center">
             <LoadingAnimation />
           </div>
-          <Nav className="flex-column text-center">
-            <Nav.Link
+          <div className="nav flex-column text-center">
+            <div
               className={`nav-link ${activeSection === "home" ? "active" : ""}`}
               onClick={() => setActiveSection("home")}
             >
-              <FaLanguage className="icon" />
+              <FaHome className="icon" />
               Home
-            </Nav.Link>
-            <Nav.Link
+            </div>
+            <div
               className={`nav-link ${
                 activeSection === "skills" ? "active" : ""
               }`}
               onClick={() => setActiveSection("skills")}
             >
-              <FaLanguage className="icon" />
+              <FaTools className="icon" />
               Skills
-            </Nav.Link>
-            <Nav.Link
+            </div>
+            <div
               className={`nav-link ${
                 activeSection === "experience" ? "active" : ""
               }`}
@@ -66,8 +66,8 @@ const Layout = () => {
             >
               <FaBriefcase className="icon" />
               Experience
-            </Nav.Link>
-            <Nav.Link
+            </div>
+            <div
               className={`nav-link ${
                 activeSection === "certifications" ? "active" : ""
               }`}
@@ -75,8 +75,8 @@ const Layout = () => {
             >
               <FaCertificate className="icon" />
               Certifications
-            </Nav.Link>
-            <Nav.Link
+            </div>
+            <div
               className={`nav-link ${
                 activeSection === "contact" ? "active" : ""
               }`}
@@ -84,14 +84,12 @@ const Layout = () => {
             >
               <FaEnvelope className="icon" />
               Contact
-            </Nav.Link>
-          </Nav>
-        </Col>
-        <Col md={9} className="p-0 m-0">
-          {renderContent()}
-        </Col>
-      </Row>
-    </Container>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-9 p-0 m-0">{renderContent()}</div>
+      </div>
+    </div>
   );
 };
 

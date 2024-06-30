@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 .projects-section {
-  padding: 0;
+  padding: 2rem;
   color: #fff;
   font-family: 'Space Mono', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y:visible;
 }
 
 .filter-buttons {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .filter-button {
-  background: #00d8ff;
-  border: 2px solid #00d8ff;
+  border: 2px solid #0ff;
   border-radius: 5px;
   color: #000;
   font-size: 1rem;
@@ -24,11 +22,14 @@
   margin: 0 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: #0ff;
 }
 
-.filter-button:hover {
-  background: #007a99;
+.filter-button:hover,
+.filter-button.active {
+  font-weight: bold;
   color: #fff;
+  background-color: #0ff;
 }
 
 .project-category {
@@ -43,7 +44,7 @@
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   margin: 1rem;
-  width: 80%;
+  width: 100%;
   max-width: 400px;
   padding: 1rem;
   opacity: 0;
@@ -55,7 +56,7 @@
 }
 
 .project-image {
-  width: 50%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
@@ -69,6 +70,18 @@
 .project-details h3 {
   font-size: 1.2rem;
   color: #0ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-role {
+  font-size: 1rem;
+  color: #0ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-company {
+  font-size: 0.9rem;
+  color: #00d8ff;
   margin-bottom: 0.5rem;
 }
 

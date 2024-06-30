@@ -10,31 +10,26 @@ import "./Home.css";
 import { timelineData } from "../dummy/timelineData";
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedYear, setSelectedYear] = useState(timelineData[0].year);
   const [slider, setSlider] = useState(null);
-
-  const handleSelect = (index) => {
-    setCurrentIndex(index);
-    setSelectedYear(timelineData[index].year);
-  };
 
   useEffect(() => {
     if (slider) {
       slider.slickGoTo(0);
     }
-  }, [selectedYear, slider]);
+  }, [slider]);
 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: timelineData[currentIndex].projects.length > 1,
-    customPaging: (i) => (
-      <div className={`custom-dot ${i === currentIndex ? "active" : ""}`}>
-        <span>{i + 1}</span>
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    customPaging: () => (
+      <div className="custom-dot">
+        <span></span>
       </div>
     ),
     appendDots: (dots) => (
@@ -42,18 +37,17 @@ const Home = () => {
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
+    afterChange: (current) => console.log("Slide changed to:", current),
   };
-
-  const currentYearData = timelineData[currentIndex];
 
   return (
     <section className="home-section">
-      <Container fluid>
+      <Container fluid className="overflow-auto">
         <Row className="justify-content-center">
-          <Col md={8}>
+          <Col lg={12}>
             <Card className="futuristic-card animated-card">
               <Card.Body>
-                <Card.Title className="text-center display-4 fs-1">
+                <Card.Title className="text-center display-4 fs-4">
                   <ReactTyped
                     strings={[
                       "Welcome to My Portfolio",
@@ -69,22 +63,19 @@ const Home = () => {
                   <div className="home-content">
                     <p>
                       <strong>Hello!</strong> I'm Nikola Stojkoski, a Fullstack
-                      Software Developer with a passion for creating innovative
-                      and interactive fullstack applications.
-                    </p>
-                    <p>
-                      I have extensive experience in software development and
-                      UI/UX design. Over the years, I've worked on designing,
-                      building, and managing websites and games for both PC and
-                      Android platforms.
-                    </p>
-                    <p>
-                      I'm highly motivated and passionate about programming,
-                      designing, and coding. I thrive on solving complex
-                      problems and bringing creative ideas to life through
-                      technology. My goal is to continuously learn and grow,
-                      leveraging my skills to develop impactful and educational
-                      applications.
+                      Software Developer with over <strong>6 years</strong> of
+                      professional experience and a strong passion for creating
+                      innovative and interactive fullstack applications. I have
+                      extensive experience in software development and UI/UX
+                      design. <br />
+                      Over the years, I've worked on designing, building, and
+                      managing websites and games for both PC and Android
+                      platforms. I'm highly motivated and passionate about
+                      programming, designing, and coding. I thrive on solving
+                      complex problems and bringing creative ideas to life
+                      through technology. My goal is to continuously learn and
+                      grow, leveraging my skills to develop impactful and
+                      educational applications.
                     </p>
                   </div>
                 </Card.Text>
@@ -92,24 +83,10 @@ const Home = () => {
             </Card>
           </Col>
         </Row>
-        <br />
         <Row className="justify-content-center" id="timeline">
-          <Col md={12}>
-            <h2 className="text-center display-5">Career Timeline</h2>
+          <Col lg={12}>
+            <h2 className="text-center display-5 fs-4 pt-2">Career Timeline</h2>
             <div className="timeline">
-              <div className="timeline-dates">
-                {timelineData.map((item, index) => (
-                  <div
-                    key={item.year}
-                    className={`timeline-date ${
-                      index === currentIndex ? "active" : ""
-                    }`}
-                    onClick={() => handleSelect(index)}
-                  >
-                    {item.year}
-                  </div>
-                ))}
-              </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -117,46 +94,57 @@ const Home = () => {
                 className="timeline-entry"
               >
                 <Slider ref={setSlider} {...settings}>
-                  {currentYearData.projects.map((project, index) => (
-                    <div key={index} className="project-slide">
-                      <h3>
-                        {selectedYear} - {project.title}
-                      </h3>
-                      {project.role && (
-                        <p>
-                          <strong>Role:</strong> {project.role}
-                        </p>
-                      )}
-                      <p>{project.description}</p>
-                      {project.technology && (
-                        <p>
-                          <strong>Technology Used:</strong> {project.technology}
-                        </p>
-                      )}
-                      {project.link && (
-                        <p>
-                          <strong>Link:</strong>{" "}
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {project.link}
-                          </a>
-                        </p>
-                      )}
-                      {project.award && (
-                        <p>
-                          <strong>Award:</strong> {project.award}
-                        </p>
-                      )}
-                      {project.status && (
-                        <p>
-                          <strong>Status:</strong> {project.status}
-                        </p>
-                      )}
-                    </div>
-                  ))}
+                  {timelineData
+                    .sort((a, b) => b.year.localeCompare(a.year))
+                    .flatMap((item) =>
+                      item.projects.map((project, index) => (
+                        <div
+                          key={index}
+                          className="project-slide"
+                          style={{
+                            width: "100%",
+                            padding: "20px",
+                            boxSizing: "border-box",
+                          }}
+                        >
+                          <h4>{project.title}</h4>
+                          <p>{project.description}</p>
+                          {project.role && (
+                            <p>
+                              <strong>Role:</strong> {project.role}
+                            </p>
+                          )}
+                          {project.technology && (
+                            <p>
+                              <strong>Technology Used:</strong>{" "}
+                              {project.technology}
+                            </p>
+                          )}
+                          {project.link && (
+                            <p>
+                              <strong>Link:</strong>{" "}
+                              <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {project.link}
+                              </a>
+                            </p>
+                          )}
+                          {project.award && (
+                            <p>
+                              <strong>Award:</strong> {project.award}
+                            </p>
+                          )}
+                          {project.status && (
+                            <p>
+                              <strong>Status:</strong> {project.status}
+                            </p>
+                          )}
+                        </div>
+                      ))
+                    )}
                 </Slider>
               </motion.div>
             </div>

@@ -29,9 +29,9 @@ const Experience = () => {
           Mobile
         </button>
       </div>
-      <div className="project-category">
+      <div className="row project-category">
         {filteredProjects.map((project, index) => (
-          <div key={index} className="project-card">
+          <div key={index} className="col-md-4 project-card">
             {project.image && (
               <img
                 src={project.image}
@@ -41,25 +41,21 @@ const Experience = () => {
               />
             )}
             <div className="project-details">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
               {project.role && (
-                <p>
+                <p className="project-role">
                   <strong>Role:</strong> {project.role}
                 </p>
               )}
+              {project.company && (
+                <p className="project-company">
+                  <strong>Company:</strong> {project.company}
+                </p>
+              )}
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
               <p>
                 <strong>Technologies Used:</strong> {project.technologies}
               </p>
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              )}
               {project.awards && (
                 <p>
                   <strong>Awards:</strong> {project.awards}
@@ -69,6 +65,16 @@ const Experience = () => {
                 <p>
                   <strong>Status:</strong> {project.status}
                 </p>
+              )}
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pb-2"
+                >
+                  {project.link}
+                </a>
               )}
             </div>
           </div>

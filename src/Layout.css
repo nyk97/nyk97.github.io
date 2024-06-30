@@ -1,13 +1,18 @@
+.container-fluid {
+  height: 100vh; 
+  overflow-y: auto;
+}
+
 .sidebar {
   background-color: #000;
   color: white;
-  min-height: 100vh;
   padding-top: 20px;
   font-family: 'Space Mono', monospace;
   border-right: #fff;
   border-style: dashed;
   border-left: #000;
   border-top: #000;
+  cursor: pointer;
   border-bottom: #000;
 }
 
@@ -15,33 +20,33 @@
   margin-bottom: 20px;
 }
 
-.profile-picture {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
 
 .nav-link {
-  font-size: 1.2em;
+  font-size: 1.1rem;
   margin: 10px 0;
   color: white;
 }
 
 .nav-link .icon {
   margin-right: 8px;
+  width: 1.5rem;
 }
 
 .nav-link.active {
   font-weight: bold;
   background-color: #495057;
-  color:#00ffff;
+  color:#0ff;
   border-radius: 0.25rem;
   text-decoration: underline;
 }
 .nav-link:hover{
   font-weight: bold;
-  color: #00ffff;
+  color: #0ff;
   border-radius: 0.25rem;
+}
+@media (max-width: 992) {
+  .container-fluid {
+    height: 100vh; 
+    overflow-y: auto;
+  }
 }

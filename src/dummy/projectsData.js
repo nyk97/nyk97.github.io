@@ -41,7 +41,7 @@ const projectsData = {
       link: "http://ifmc.ukim.mk",
     },
     {
-      title: "agroglobal.mk (2021)",
+      title: "Agroglobal DOOEL SKOPJE (2021 - Present)",
       role: "UI/UX Designer, Creator, and Manager",
       description:
         "A website for selling agriculture products. Managed cPanel, VPS, and emails.",
@@ -49,7 +49,15 @@ const projectsData = {
       link: "http://agroglobal.mk",
     },
     {
-      title: "neatdollar.com (2021 - Present)",
+      title: "TAV Skopje International Airport(2023)",
+      role: "Front-End Developer",
+      description:
+        "Built the  Admin Panel's front-end for the TAV airport in Skopje.",
+      technologies: "React, TailwindCSS, Redux",
+      link: "http://devtavadmin.mk-host.mk/",
+    },
+    {
+      title: "NeatDollar Business Forum (2021 - Present)",
       role: "UI/UX Designer, Creator, and Manager",
       description:
         "A business website providing financial advice. Managed cPanel, VPS, and emails.",
@@ -57,20 +65,11 @@ const projectsData = {
       link: "http://neatdollar.com",
     },
     {
-      title: "alobushavko.mk (2021)",
+      title: "Alobushavko - First Children's Embaassy in the World - Megjashi",
       role: "UI/UX Designer, Developer",
-      description:
-        "Recreated, fixed bugs, and resolved hosting problems for a website by Megjashi.",
+      description: "Recreated, fixed bugs, and resolved hosting problems.",
       technologies: "Joomla, Figma",
       link: "http://alobushavko.mk",
-    },
-    {
-      title: "TAV Airport Admin Panel (2023)",
-      role: "Front-End Developer",
-      description:
-        "Built the admin panel's front-end for the TAV airport in Skopje.",
-      technologies: "React",
-      link: "http://example.com/tav-admin-panel",
     },
     {
       title: "Invoice Management App (2023)",
@@ -83,8 +82,9 @@ const projectsData = {
       title: "Megjashi Archive and Library App (2024)",
       role: "UI/UX Designer, Developer",
       description:
-        "Designed and programmed a desktop app for the First Children's Embassy in the world, Megjashi. The app serves as an archive and library.",
+        "Designed and programmed a desktop app for the First Children's Embassy in the World - Megjashi. The app serves as an archive and library.",
       technologies: "React Native, Node.js",
+      link: "https://shorturl.at/PEGj0",
     },
     {
       title: "Vremezamene.mk (2020)",
@@ -100,7 +100,7 @@ const projectsData = {
       description:
         "A website for Medical Equipments from Turkey in Macedonia. Managed cPanel, VPS, and emails.",
       technologies: "WordPress (Theme: Astra), Figma",
-      status: "Not available currently",
+      status: "Platform is not currently available",
     },
   ],
 };

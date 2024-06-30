@@ -10,11 +10,10 @@
 
 .loading-circle {
   position: relative;
-  width: 15vh;
-  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: contain;
 }
 
 .loading-circle::before,

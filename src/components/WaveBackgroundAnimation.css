@@ -1,0 +1,40 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.section_wave {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.dash {
+  stroke: #FBC02E;
+  stroke-dasharray: 2000; 
+  stroke-dashoffset: 2000;
+  animation: dash-animation 10s linear infinite;
+}
+
+@keyframes dash-animation {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    stroke-dashoffset: -2000; 
+  }
+}
+
+.dash_0 { animation-delay: 0s; }
+.dash_1 { animation-delay: 2s; }
+.dash_2 { animation-delay: 4s; }
+.dash_3 { animation-delay: 6s; }
+.dash_4 { animation-delay: 8s; }
