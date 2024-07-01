@@ -32,7 +32,7 @@ const Certifications = () => {
   ].sort((a, b) => b.slice(-4) - a.slice(-4));
 
   return (
-    <div className="container pb-5">
+    <div className="container-fluid pb-5 overflow-auto">
       <WaveBackgroundAnimation />
       <div className="row justify-content-center">
         <div className="col-md-8">

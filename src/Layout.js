@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import {
-  FaEnvelope,
   FaHome,
   FaTools,
   FaBriefcase,
   FaCertificate,
+  FaEnvelope,
+  FaEye,
+  FaEyeSlash,
 } from "react-icons/fa";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -14,11 +17,45 @@ import Home from "./components/Home";
 import LoadingAnimation from "./components/LoadingAnimation";
 import "./Layout.css";
 
+const PasswordInput = ({ password, handlePasswordChange }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  return (
+    <div className="form-group">
+      <label htmlFor="password">Enter Password:</label>
+      <div style={{ position: "relative" }}>
+        <input
+          type={showPassword ? "text" : "password"}
+          id="password"
+          value={password}
+          onChange={handlePasswordChange}
+          style={{ paddingRight: "40px" }} // Make room for the icon
+        />
+        <div
+          style={{
+            position: "absolute",
+            right: "10px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            cursor: "pointer",
+          }}
+          onClick={togglePasswordVisibility}
+        >
+          {showPassword ? <FaEyeSlash /> : <FaEye />}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Layout = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
-  // eslint-disable-next-line no-unused-vars
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   useEffect(() => {
@@ -72,15 +109,10 @@ const Layout = () => {
           <LoadingAnimation />
         </div>
         <form className="password-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="password">Enter Password:</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-          </div>
+          <PasswordInput
+            password={password}
+            handlePasswordChange={handlePasswordChange}
+          />
           <button type="submit">Submit</button>
         </form>
       </div>

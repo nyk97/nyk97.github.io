@@ -6,7 +6,7 @@
   font-family: 'Space Mono', monospace;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  padding-top: 20px;
 }
 
 .skills-container {

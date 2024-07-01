@@ -153,182 +153,184 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="skills-section">
-      <Container className="skills-container">
-        <Row>
-          <Col lg={4} className="skills-column">
-            <div className="skill-category">
-              <h2>Front-End</h2>
-              <Row>
-                {skillGroups["Front-End"].map((skill, skillIndex) => (
-                  <Col key={skillIndex} xs={4} className="skill-col">
-                    <div className="skill-wrapper">
-                      <CircularProgressbar
-                        value={animateProgress ? skill.proficiency : 0}
-                        text={`${skill.proficiency}%`}
-                        styles={buildStyles({
-                          textColor: "#fff",
-                          pathColor: "#0ff",
-                          trailColor: "#2a2a2a",
-                          textSize: "1.4rem",
-                          pathTransitionDuration: 2,
-                        })}
-                      />
-                      <div className="skill-name">
-                        {skill.icon}
-                        <span>{skill.name}</span>
+    <div className="container-fluid overflow-auto">
+      <section className="skills-section">
+        <Container className="skills-container">
+          <Row>
+            <Col lg={4} className="skills-column">
+              <div className="skill-category">
+                <h2>Front-End</h2>
+                <Row>
+                  {skillGroups["Front-End"].map((skill, skillIndex) => (
+                    <Col key={skillIndex} xs={4} className="skill-col">
+                      <div className="skill-wrapper">
+                        <CircularProgressbar
+                          value={animateProgress ? skill.proficiency : 0}
+                          text={`${skill.proficiency}%`}
+                          styles={buildStyles({
+                            textColor: "#fff",
+                            pathColor: "#0ff",
+                            trailColor: "#2a2a2a",
+                            textSize: "1.4rem",
+                            pathTransitionDuration: 2,
+                          })}
+                        />
+                        <div className="skill-name">
+                          {skill.icon}
+                          <span>{skill.name}</span>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </Col>
-          <Col lg={4} className="skills-column">
-            <div className="skill-category">
-              <h2>Back-End</h2>
-              <Row>
-                {skillGroups["Back-End"].map((skill, skillIndex) => (
-                  <Col key={skillIndex} xs={4} className="skill-col">
-                    <div className="skill-wrapper">
-                      <CircularProgressbar
-                        value={animateProgress ? skill.proficiency : 0}
-                        text={`${skill.proficiency}%`}
-                        styles={buildStyles({
-                          textColor: "#fff",
-                          pathColor: "#0ff",
-                          trailColor: "#2a2a2a",
-                          textSize: "1.4rem",
-                          pathTransitionDuration: 2,
-                        })}
-                      />
-                      <div className="skill-name">
-                        {skill.icon}
-                        <span>{skill.name}</span>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+            <Col lg={4} className="skills-column">
+              <div className="skill-category">
+                <h2>Back-End</h2>
+                <Row>
+                  {skillGroups["Back-End"].map((skill, skillIndex) => (
+                    <Col key={skillIndex} xs={4} className="skill-col">
+                      <div className="skill-wrapper">
+                        <CircularProgressbar
+                          value={animateProgress ? skill.proficiency : 0}
+                          text={`${skill.proficiency}%`}
+                          styles={buildStyles({
+                            textColor: "#fff",
+                            pathColor: "#0ff",
+                            trailColor: "#2a2a2a",
+                            textSize: "1.4rem",
+                            pathTransitionDuration: 2,
+                          })}
+                        />
+                        <div className="skill-name">
+                          {skill.icon}
+                          <span>{skill.name}</span>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </Col>
-          <Col lg={4} className="skills-column">
-            <div className="skill-category">
-              <h2>Web Development</h2>
-              <Row>
-                {skillGroups["Web Development"].map((skill, skillIndex) => (
-                  <Col key={skillIndex} xs={4} className="skill-col">
-                    <div className="skill-wrapper">
-                      <CircularProgressbar
-                        value={animateProgress ? skill.proficiency : 0}
-                        text={`${skill.proficiency}%`}
-                        styles={buildStyles({
-                          textColor: "#fff",
-                          pathColor: "#0ff",
-                          trailColor: "#2a2a2a",
-                          textSize: "1.4rem",
-                          pathTransitionDuration: 2,
-                        })}
-                      />
-                      <div className="skill-name">
-                        {skill.icon}
-                        <span>{skill.name}</span>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+            <Col lg={4} className="skills-column">
+              <div className="skill-category">
+                <h2>Web Development</h2>
+                <Row>
+                  {skillGroups["Web Development"].map((skill, skillIndex) => (
+                    <Col key={skillIndex} xs={4} className="skill-col">
+                      <div className="skill-wrapper">
+                        <CircularProgressbar
+                          value={animateProgress ? skill.proficiency : 0}
+                          text={`${skill.proficiency}%`}
+                          styles={buildStyles({
+                            textColor: "#fff",
+                            pathColor: "#0ff",
+                            trailColor: "#2a2a2a",
+                            textSize: "1.4rem",
+                            pathTransitionDuration: 2,
+                          })}
+                        />
+                        <div className="skill-name">
+                          {skill.icon}
+                          <span>{skill.name}</span>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={4} className="skills-column">
-            <div className="skill-category">
-              <h2>Game Development</h2>
-              <Row>
-                {skillGroups["Game Development"].map((skill, skillIndex) => (
-                  <Col key={skillIndex} xs={4} className="skill-col">
-                    <div className="skill-wrapper">
-                      <CircularProgressbar
-                        value={animateProgress ? skill.proficiency : 0}
-                        text={`${skill.proficiency}%`}
-                        styles={buildStyles({
-                          textColor: "#fff",
-                          pathColor: "#0ff",
-                          trailColor: "#2a2a2a",
-                          textSize: "1.4rem",
-                          pathTransitionDuration: 2,
-                        })}
-                      />
-                      <div className="skill-name">
-                        {skill.icon}
-                        <span>{skill.name}</span>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={4} className="skills-column">
+              <div className="skill-category">
+                <h2>Game Development</h2>
+                <Row>
+                  {skillGroups["Game Development"].map((skill, skillIndex) => (
+                    <Col key={skillIndex} xs={4} className="skill-col">
+                      <div className="skill-wrapper">
+                        <CircularProgressbar
+                          value={animateProgress ? skill.proficiency : 0}
+                          text={`${skill.proficiency}%`}
+                          styles={buildStyles({
+                            textColor: "#fff",
+                            pathColor: "#0ff",
+                            trailColor: "#2a2a2a",
+                            textSize: "1.4rem",
+                            pathTransitionDuration: 2,
+                          })}
+                        />
+                        <div className="skill-name">
+                          {skill.icon}
+                          <span>{skill.name}</span>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </Col>
-          <Col lg={4} className="skills-column">
-            <div className="skill-category">
-              <h2>Mobile</h2>
-              <Row>
-                {skillGroups["Mobile & Desktop"].map((skill, skillIndex) => (
-                  <Col key={skillIndex} xs={4} className="skill-col">
-                    <div className="skill-wrapper">
-                      <CircularProgressbar
-                        value={animateProgress ? skill.proficiency : 0}
-                        text={`${skill.proficiency}%`}
-                        styles={buildStyles({
-                          textColor: "#fff",
-                          pathColor: "#0ff",
-                          trailColor: "#2a2a2a",
-                          textSize: "1.4rem",
-                          pathTransitionDuration: 2,
-                        })}
-                      />
-                      <div className="skill-name">
-                        {skill.icon}
-                        <span>{skill.name}</span>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+            <Col lg={4} className="skills-column">
+              <div className="skill-category">
+                <h2>Mobile</h2>
+                <Row>
+                  {skillGroups["Mobile & Desktop"].map((skill, skillIndex) => (
+                    <Col key={skillIndex} xs={4} className="skill-col">
+                      <div className="skill-wrapper">
+                        <CircularProgressbar
+                          value={animateProgress ? skill.proficiency : 0}
+                          text={`${skill.proficiency}%`}
+                          styles={buildStyles({
+                            textColor: "#fff",
+                            pathColor: "#0ff",
+                            trailColor: "#2a2a2a",
+                            textSize: "1.4rem",
+                            pathTransitionDuration: 2,
+                          })}
+                        />
+                        <div className="skill-name">
+                          {skill.icon}
+                          <span>{skill.name}</span>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </Col>
-          <Col lg={4} className="skills-column">
-            <div className="skill-category">
-              <h2>Design</h2>
-              <Row>
-                {skillGroups["Design & Video"].map((skill, skillIndex) => (
-                  <Col key={skillIndex} xs={4} className="skill-col">
-                    <div className="skill-wrapper">
-                      <CircularProgressbar
-                        value={animateProgress ? skill.proficiency : 0}
-                        text={`${skill.proficiency}%`}
-                        styles={buildStyles({
-                          textColor: "#fff",
-                          pathColor: "#0ff",
-                          trailColor: "#2a2a2a",
-                          textSize: "1.4rem",
-                          pathTransitionDuration: 2,
-                        })}
-                      />
-                      <div className="skill-name">
-                        {skill.icon}
-                        <span>{skill.name}</span>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+            <Col lg={4} className="skills-column">
+              <div className="skill-category">
+                <h2>Design</h2>
+                <Row>
+                  {skillGroups["Design & Video"].map((skill, skillIndex) => (
+                    <Col key={skillIndex} xs={4} className="skill-col">
+                      <div className="skill-wrapper">
+                        <CircularProgressbar
+                          value={animateProgress ? skill.proficiency : 0}
+                          text={`${skill.proficiency}%`}
+                          styles={buildStyles({
+                            textColor: "#fff",
+                            pathColor: "#0ff",
+                            trailColor: "#2a2a2a",
+                            textSize: "1.4rem",
+                            pathTransitionDuration: 2,
+                          })}
+                        />
+                        <div className="skill-name">
+                          {skill.icon}
+                          <span>{skill.name}</span>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </div>
   );
 };
 
